@@ -1,0 +1,115 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% yale_thesis.tex
+% Alexander Cerjan
+% 2014/04/07
+%
+% A bare, sample template for a Yale PhD thesis using yalephd.cls
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,12pt,draft]{yalephd}
+% remove draft option for final printing.
+% font size must be between 10pt-12pt.
+
+\usepackage{geometry} % you need this for yalephd.cls to work.
+\usepackage{graphicx} % you probably want the rest of these.
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{appendix}
+\usepackage{comment}
+\usepackage{cite}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+% Need to define title before the abstract.
+\title{Title goes here}
+\author{Your name}
+\advisor{Your advisor's name}
+\date{Date you'll receive your degree} % usually not \today.
+
+% All the stuff at the front of your thesis.
+\frontmatter
+
+\begin{abstract}
+Abstract goes here. Limit 750 words.
+\end{abstract}
+
+
+\maketitle
+\makecopyright{2015}
+\tableofcontents
+\listoffigures % remove this if you have no figures.
+\listoftables % remove this if you have no tables.
+
+\chapter{Acknowledgements} % this needs to be before \mainmatter.
+A lot of people are awesome. Probably your family, friends, 
+advisor, and that one super special high school teacher who
+believed in you.
+
+% Starts proper arabic numbering of pages and chapters.
+\mainmatter
+
+\chapter{Introduction}
+Your first chapter is probably an introduction. But who knows. Check out Eq.\ \ref{that_right_triangle_rule}!
+Note that after Eq.\ and Fig.\ you want to use `.\textbackslash'  to use a single sized space. Otherwise,
+latex will interpret it as the end of a sentence and put additional white space in between `Eq.' and 
+`\ref{that_right_triangle_rule}'.
+
+\begin{equation}
+a^2 + b^2 = c^2 \label{that_right_triangle_rule}
+\end{equation}
+
+\chapter{A new chapter}
+Your second chapter probably has novel material in it. hopefully.
+
+% Add additional \chapter{}s as necessary.
+
+% use \cite{} to cite a reference in your bibliography file.
+% use \ref{} to reference a \label{} from an equation, figure, or table.
+
+% for sets of equations use align:
+%\begin{align}
+%\end{align}
+
+% for figures:
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=.45\textwidth]{name_of_figure.eps}
+%\caption{A caption! \label{a_figure}}
+%\end{figure}
+
+% for tables:
+%\begin{table}
+%\begin{tabular}{c|c|c}
+% 1 & 2 & 3 \\
+%\hline
+%\end{tabular}
+%\caption{Another caption! \label{a_table}}
+%\end{table}
+
+% Only call appendix once, here.
+\appendix
+
+\chapter{Stuff}
+If you need an appendix, it will go here.
+
+\begin{align}
+a^n + b^n &\ne c^n \\
+n &> 2
+\end{align}
+
+\chapter{More stuff}
+A second appendix. Look at you, you over achiever.
+
+% Any chapters such as End Notes go after this.
+\backmatter
+
+\bibliography{name_of_your_bibtex_file}
+% for your own sake, use a bibtex file, so all of the numbering of references will be done
+% automatically.
+
+\end{document}
