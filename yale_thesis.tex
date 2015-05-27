@@ -6,7 +6,7 @@
 % A bare, sample template for a Yale PhD thesis using yalephd.cls
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[letterpaper,12pt,draft]{yalephd}
+\documentclass[letterpaper,11pt]{yalephd}
 % remove draft option for final printing.
 % font size must be between 10pt-12pt.
 
@@ -20,8 +20,9 @@
 \usepackage{appendix}
 \usepackage{comment}
 \usepackage{cite}
+\usepackage{notoccite}
 
-\bibliographystyle{plain}
+\bibliographystyle{abbrvunsrt}
 
 \begin{document}
 
@@ -29,7 +30,7 @@
 \title{Title goes here}
 \author{Your name}
 \advisor{Your advisor's name}
-\date{Date you'll receive your degree} % usually not \today.
+\date{Month, year you'll receive your degree, like ``May, 2015''} % usually not \today.
 
 % All the stuff at the front of your thesis.
 \frontmatter
@@ -40,7 +41,7 @@ Abstract goes here. Limit 750 words.
 
 
 \maketitle
-\makecopyright{2015}
+\makecopyright{2015} % change as needed.
 \tableofcontents
 \listoffigures % remove this if you have no figures.
 \listoftables % remove this if you have no tables.
@@ -54,10 +55,10 @@ believed in you.
 \mainmatter
 
 \chapter{Introduction}
-Your first chapter is probably an introduction. But who knows. Check out Eq.\ \ref{that_right_triangle_rule}!
+Your first chapter is probably an introduction. But who knows. Check out Eq.\ (\ref{that_right_triangle_rule})!
 Note that after Eq.\ and Fig.\ you want to use `.\textbackslash'  to use a single sized space. Otherwise,
 latex will interpret it as the end of a sentence and put additional white space in between `Eq.' and 
-`\ref{that_right_triangle_rule}'.
+`(\ref{that_right_triangle_rule})'.
 
 \begin{equation}
 a^2 + b^2 = c^2 \label{that_right_triangle_rule}
@@ -71,9 +72,11 @@ Your second chapter probably has novel material in it. hopefully.
 % use \cite{} to cite a reference in your bibliography file.
 % use \ref{} to reference a \label{} from an equation, figure, or table.
 
-% for sets of equations use align:
+% for sets of equations use align or gather:
 %\begin{align}
 %\end{align}
+
+% for long equations, use multline.
 
 % for figures:
 %\begin{figure}[ht]
