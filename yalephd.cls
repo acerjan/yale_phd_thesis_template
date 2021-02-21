@@ -213,7 +213,7 @@ class, modified by AG]
     \pagestyle{empty}%
     \begin{center}
       {\bf Abstract}\par\bigskip
-      {\Large \bf \@title}\par\bigskip
+      {\bf \@title}\par\bigskip
       \@author \\
       \the\year
       \end{center}%
@@ -234,7 +234,7 @@ class, modified by AG]
 \renewcommand\maketitle{\begin{titlepage}%
   \null \vskip 40\p@
   \begin{center}%
-    {\LARGE\bf \@title \par}%
+    {\large\bf \@title \par}%
     \vfil
     \begin{singlespace}
     {\large
